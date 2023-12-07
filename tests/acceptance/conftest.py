@@ -139,6 +139,7 @@ def given_running_site(luteclient):
     resp = requests.get(luteclient.home, timeout=5)
     assert resp.status_code == 200, f"{luteclient.home} is up"
     luteclient.visit("/")
+    luteclient.clear_book_filter()
     assert luteclient.browser.is_text_present("Lute")
 
 
