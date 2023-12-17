@@ -256,9 +256,9 @@ div#reading-header {
 #menuToggle span
 {
   display: block;
-  width: 33px;
+  width: 20px;
   height: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   position: relative;
   
   background: #cdcdcd;
