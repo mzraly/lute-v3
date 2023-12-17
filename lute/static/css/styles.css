@@ -233,20 +233,6 @@ div#reading-header {
   user-select: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
 #menuToggle input
 {
   display: block;
@@ -332,12 +318,12 @@ div#reading-header {
 #menu
 {
   position: absolute;
-  width: 300px;
   margin: -100px 0 0 -50px;
   padding: 50px;
-  padding-top: 125px;
+  padding-top: 50px;
   
-  background: #ededed;
+  background: white;
+
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -351,7 +337,6 @@ div#reading-header {
 #menu li
 {
   padding: 10px 0;
-  font-size: 22px;
 }
 
 /*
