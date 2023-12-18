@@ -211,7 +211,7 @@ div#reading-header {
 
 .reading_header_left {
     width: fit-content;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .reading_header_right {
@@ -306,7 +306,7 @@ div#reading-header {
 
 #menu li
 {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 /*
