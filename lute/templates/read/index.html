@@ -27,20 +27,25 @@
         <td width="25px">
           <div id="menuToggle">
             <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
 
             <ul id="menu">
-              <li>Home</li>
-              <li>Font size</li>
-              <li>Edit page</li>
-              <li>Keyboard shortcuts</li>
+              <li><a id="reading_home_link" class="home-link" href="/">Home</a></li>
+              {% if book.source_uri %}
+              <li><a href="{{ book.source_uri }}" target="_blank" tabindex="-1">Show source URL</a></li>
+              {% endif %}
+              <li><a href="" onclick="edit_current_page(); return false;">Edit page</a></li>
+              <li><a id="keyboard_shortcuts" title="Keyboard shortcuts">Keyboard shortcuts</a></li>
+              <li><a id="next_theme" title="Next theme">TODO Next theme</a></li>
+              <li><a id="toggle_highlights" title="Toggle highlights">TODO Toggle highlights</a></li>
             </ul>
 
           </div>
         </td>
         <td align="left">
+          <h2>Home link here TODO</h2>
           <h2 style="margin: 0px">
             <span
               class="read_page_nav read_page_disabled"
@@ -67,28 +72,6 @@
               onclick="goto_relative_page(10)"
               >&#187;</span>
           </h2>
-        </td>
-        <td align="right">
-          <span><a id="reading_home_link" class="home-link" href="/">Home</a></span>
-          {% if book.source_uri %}
-          <a href="{{ book.source_uri }}" target="_blank" tabindex="-1">
-            <img
-              src="{{ url_for('static', filename='icn/external.png') }}"
-              title="Show source URL" />
-          </a>
-          {% endif %}
-          <span id="editText" style="cursor: pointer" onclick="edit_current_page()">
-            <img
-              src="{{ url_for('static', filename='icn/document--pencil.png') }}"
-              title="Edit"
-              alt="Edit" />
-          </span>
-          <img
-            id="keyboard_shortcuts"
-            style="margin-right: 10px"
-            src="{{ url_for('static', filename='icn/question-balloon.png') }}"
-            title="Keyboard shortcuts"
-          />
         </td>
       </tr>
     </table>

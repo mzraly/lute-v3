@@ -243,7 +243,7 @@ div#reading-header {
 /*
  * Just a quick hamburger
  */
-#menuToggle span
+#menuToggle span.hamburger
 {
   width: 20px;
   height: 4px;
