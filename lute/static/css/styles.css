@@ -265,7 +265,7 @@ div#reading-header {
   position: absolute;
   margin: 10px 0 0 -50px;
   height: 100%;
-  padding: 50px;
+  padding: 15px;
   padding-left: 50px;
   z-index: 1;
   border-right: 1px solid grey;
