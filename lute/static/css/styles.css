@@ -254,6 +254,12 @@ div#reading-header {
   z-index: 1;
   position: relative;
   display: block;
+
+  transform-origin: 0px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
 }
 
 /*
@@ -292,6 +298,44 @@ div#reading-header {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+
+#menuToggle span.hamburger:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span.hamburger:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span.hamburger
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span.hamburger:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0, 0);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span.hamburger:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0px, -1px);
 }
 
 /* end nav */
