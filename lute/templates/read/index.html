@@ -20,61 +20,60 @@
 </div>
 
 <div id="read_pane_left">
+
   <div id="reading-header">
-    <!-- Lacking css skills, so table layout to the rescue. -->
-    <table style="width: 100%">
-      <tr>
-        <td width="25px">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
 
-            <ul id="menu">
-              <li><a id="reading_home_link" class="home-link" href="/">Home</a></li>
-              {% if book.source_uri %}
-              <li><a href="{{ book.source_uri }}" target="_blank" tabindex="-1">Show source URL</a></li>
-              {% endif %}
-              <li><a href="" onclick="edit_current_page(); return false;">Edit page</a></li>
-              <li><a id="keyboard_shortcuts" title="Keyboard shortcuts">Keyboard shortcuts</a></li>
-              <li><a id="next_theme" title="Next theme">TODO Next theme</a></li>
-              <li><a id="toggle_highlights" title="Toggle highlights">TODO Toggle highlights</a></li>
-            </ul>
+    <div id="menuToggle" class="reading_header_left">
+      <input type="checkbox" />
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
 
-          </div>
-        </td>
-        <td align="left">
-          <h2>Home link here TODO</h2>
-          <h2 style="margin: 0px">
-            <span
-              class="read_page_nav read_page_disabled"
-              id="navPrev10"
-              onclick="goto_relative_page(-10)"
-              >&#171;</span>
-            <span
-              class="read_page_nav read_page_disabled"
-              id="navPrev"
-              onclick="goto_relative_page(-1)"
-              >&#8249;</span>
+      <ul id="menu">
+        <li><a href="/">Home</a></li>
+        {% if book.source_uri %}
+        <li><a href="{{ book.source_uri }}" target="_blank" tabindex="-1">Show source URL</a></li>
+        {% endif %}
+        <li><a href="" onclick="edit_current_page(); return false;">Edit page</a></li>
+        <li><a id="keyboard_shortcuts" title="Keyboard shortcuts">Keyboard shortcuts</a></li>
+        <li><a id="next_theme" title="Next theme">TODO Next theme</a></li>
+        <li><a id="toggle_highlights" title="Toggle highlights">TODO Toggle highlights</a></li>
+      </ul>
 
-            <span id="page_indicator">{{ page_num }}/{{ page_count }}</span>
+    </div>
 
-            <span
-              class="read_page_nav read_page_disabled"
-              id="navNext"
-              onclick="goto_relative_page(1)"
-              >&#8250;</span>
+    <div class="reading_header_middle">
+      <h2 style="margin: 0px">
+        <span
+          class="read_page_nav read_page_disabled"
+          id="navPrev10"
+          onclick="goto_relative_page(-10)"
+          >&#171;</span>
+        <span
+          class="read_page_nav read_page_disabled"
+          id="navPrev"
+          onclick="goto_relative_page(-1)"
+          >&#8249;</span>
+        
+        <span id="page_indicator">{{ page_num }}/{{ page_count }}</span>
 
-            <span
-              class="read_page_nav read_page_disabled"
-              id="navNext10"
-              onclick="goto_relative_page(10)"
-              >&#187;</span>
-          </h2>
-        </td>
-      </tr>
-    </table>
+        <span
+          class="read_page_nav read_page_disabled"
+          id="navNext"
+          onclick="goto_relative_page(1)"
+          >&#8250;</span>
+
+        <span
+          class="read_page_nav read_page_disabled"
+          id="navNext10"
+          onclick="goto_relative_page(10)"
+          >&#187;</span>
+      </h2>
+    </div>
+
+    <div class="reading_header_right">
+      <a id="reading_home_link" class="home-link" href="/">Home</a>
+    </div>
 
   </div>
 

@@ -203,9 +203,26 @@ div#read_pane_right {
 }
 
 div#reading-header {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
+.reading_header_left {
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.reading_header_right {
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.reading_header_middle {
+    flex-grow: 1;
+}
+    
 /* End layouts *****************************************/
 
 /* nav */
